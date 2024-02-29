@@ -1,0 +1,14 @@
+#input {
+    width: 50%;
+    height: 20%;
+    resize: none;
+    box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur/hauteur totale */
+    padding: 10px; /* Ajouter du padding pour un meilleur aspect visuel (facultatif) */
+}
+
+
+#slskyt {
+    font-family: monospace;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
