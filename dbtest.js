@@ -39,4 +39,3 @@ X-COAST - XTC V (Original Mix).mp3
 M-High - The Answer (Original Mix).mp3
 M-High - They Shifted Left [www.slider.kz].mp3 03-marsolo--mindflow-dh.mp3
 `
-module.exports = rawTxt;
