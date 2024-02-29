@@ -51,7 +51,7 @@ function parse(string){
     const arr = string.split(/\.mp3|\.wav|\.aiff|\.flac/)
     console.log(arr)
     let arrWithoutHyphen = arr.map(chaine => chaine.replace(/[-_]+/g, ' '));
-    let arrWithoutLink = arrWithoutHyphen.map(chaine => chaine.replace(/\s*\[\s*www\.[^\]]*\]\s*$/g, ' '))
+    let arrWithoutLink = arrWithoutHyphen.map(chaine => chaine.replace(/\s*\[\s*www\.[^\]]*\]\s*$/g, ' '));
 console.log(arrWithoutLink)
     return arrWithoutLink
 };
