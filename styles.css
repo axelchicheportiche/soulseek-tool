@@ -7,7 +7,8 @@ body {
     padding: 0;
 }
 
-.container{
+.container {
+    position: relative;
     display: flex;
     flex-direction: column;
 }
@@ -31,7 +32,7 @@ body {
 
 }
 
-#magik-btn{
+#magik-btn {
     margin-left: 5px;
     margin-bottom: 5px;
     background-color: #50ebff;
@@ -53,7 +54,8 @@ body {
     font-family: monospace;
 
 }
-.output{
+
+.output {
     width: 97.5vw;
     height: 84vh;
 }
@@ -71,15 +73,39 @@ body {
 a {
     color: #50ebff;
 }
+
 a:hover {
-    color:#c5c5ff;
+    color: #c5c5ff;
 }
 
 a:visited {
     color: #65888d;
 }
 
-.text-part {
+.notice {
+    position: fixed;
     font-family: monospace;
     margin: 5em;
+    display: none;
+    background-color: rgb(45, 45, 45);
+    border: 1px solid white;
+    padding: 1em;
+    align-self: center;
+}
+
+.show {
+    display: block;
+}
+
+#howtouseme {
+    cursor: pointer;
+}
+
+.close-notice-btn {
+    position: absolute;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    right: 20px;
+    top: 20px;
 }
