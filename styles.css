@@ -39,6 +39,11 @@ body {
     font-family: monospace;
 }
 
+#magik-btn:hover {
+    cursor: help;
+    background-color: #65b5c0;
+}
+
 #title {
     font-family: "VT323";
     font-size: 2em;
@@ -52,7 +57,10 @@ body {
     width: 50%;
     text-align: center;
     font-family: monospace;
+}
 
+#howtouseme {
+    margin: 10px;
 }
 
 .output {
