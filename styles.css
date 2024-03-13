@@ -102,7 +102,16 @@ a:visited {
     border: 1px solid white;
     padding: 1em;
     align-self: center;
+    overflow: hidden;
+    white-space: normal;
 }
+
+@media only screen and (max-width: 767px) {
+    .notice {
+        width: 80%;
+    }
+    }
+
 
 .show {
     display: block;
