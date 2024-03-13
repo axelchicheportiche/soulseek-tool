@@ -29,7 +29,10 @@ body {
     margin-bottom: 5px;
     font-family: monospace;
     background-color: #ccc;
+}
 
+#input:hover {
+    cursor: text;
 }
 
 #magik-btn {
