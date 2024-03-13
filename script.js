@@ -1,13 +1,23 @@
 // Soulscipt.js
 
 function parse(string) {
+
+    // Split the input string based on file extensions ".mp3", ".wav", ".aiff", ".flac"
     const arr = string.split(/\.mp3|\.wav|\.aiff|\.flac/);
+
+    // Replace hyphens and underscores with spaces in each element of the array
     let arrWithoutHyphen = arr.map((chaine) => chaine.replace(/[-_]+/g, " "));
+
+    // Remove any trailing links enclosed in square brackets "[www.somelink.com]" from each array element
     let arrWithoutLink = arrWithoutHyphen.map((chaine) =>
         chaine.replace(/\s*\[\s*www\.[^\]]*\]\s*$/g, " ")
     );
-    console.log("arrWithoutLink:", arrWithoutLink);
-    return arrWithoutLink;
+
+    // Remove occurrences that start with "0[1-9][ \-.]" or "\s\n0[1-9][ \-.]" from each array element
+    let arrWithoutStartNbr =  arrWithoutLink.map((chaine) =>
+    chaine.replace(/^(0[1-9][ \-.]|[\s\n]+0[1-9][ \-.])/g, '')
+);
+    return arrWithoutStartNbr;
 }
 
 function youtubizeParse() {
