@@ -2,8 +2,9 @@
 
 function parse(string) {
 
-    // Split the input string based on file extensions ".mp3", ".wav", ".aiff", ".flac"
-    const arr = string.split(/\.mp3|\.wav|\.aiff|\.flac/);
+    // Split the input string based on file extensions ".mp3", ".wav", ".aiff", ".flac" ...
+    const arr = string.split(/\.mp3|\.wav|\.aiff|\.flac|\.aif|\.ogg|\.aac|\.m4a|\.wma|\.ape|\.opus/);
+    console.log("mon arr",arr)
 
     // Replace hyphens and underscores with spaces in each element of the array
     let arrWithoutHyphen = arr.map((chaine) => chaine.replace(/[-_]+/g, " "));
@@ -16,8 +17,11 @@ function parse(string) {
     // Remove occurrences that start with "0[1-9][ \-.]" or "\s\n0[1-9][ \-.]" from each array element
     let arrWithoutStartNbr =  arrWithoutLink.map((chaine) =>
     chaine.replace(/^(0[1-9][ \-.]|[\s\n]+0[1-9][ \-.])/g, '')
-);
-    return arrWithoutStartNbr;
+    );
+
+    //Remove occurence [' " , `]
+    let arrFinal = arrWithoutStartNbr.map((chaine) => chaine.replace(/['",`]+/g, ""));
+    return arrFinal;
 }
 
 function youtubizeParse() {
